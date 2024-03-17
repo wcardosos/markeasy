@@ -1,0 +1,10 @@
+# Folders
+
+lib/
+node_modules/
+tests/
+
+# Files
+.eslintrc.json
+vitest.config.mts
+.gitignore
