@@ -19,5 +19,5 @@ npm install markeasy
 ```javascript
 import { transformMarkdownToHtml} from 'markshare'
 
-transformMarkdownToHtml('# Deu bom').then((result) => console.log(result.html))
+transformMarkdownToHtml('# markeasy').then((result) => console.log(result.html))
 ```
