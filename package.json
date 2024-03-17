@@ -1,10 +1,12 @@
 {
-  "name": "markshare",
+  "name": "markeasy",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Transform markdown content into HTML content easily",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
     "test": "vitest run"
   },
   "keywords": [],
