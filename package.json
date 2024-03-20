@@ -1,6 +1,6 @@
 {
   "name": "markeasy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Transform markdown content into HTML content easily",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
