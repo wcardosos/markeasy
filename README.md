@@ -17,8 +17,11 @@ npm install markeasy
 
 # Usage
 ```javascript
-import { transformMarkdownToHtml} from 'markeasy'
+import { buildHtml} from 'markeasy'
 
-transformMarkdownToHtml('# markeasy').then((result) => console.log(result.html))
+const result = buildHtml('# markeasy')
+
+console.log(result.html)
+console.log(result.metadata)
 // <h1>markeasy</h1>
 ```
