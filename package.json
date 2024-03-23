@@ -1,20 +1,24 @@
 {
   "name": "markeasy",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Transform markdown content into HTML content easily",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "author": "wcardosos",
   "homepage": "https://github.com/wcardosos/markeasy",
-  "repository":{
+  "repository": {
     "url": "https://github.com/wcardosos/markeasy"
   },
   "scripts": {
     "build": "tsup",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
-  "keywords": ["markdown", "html"],
+  "keywords": [
+    "markdown",
+    "html"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.24",
@@ -26,14 +30,15 @@
     "eslint-plugin-prettier": "^5.1.3",
     "tsx": "^4.7.1",
     "typescript": "^5.3.3",
+    "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.3.1"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "rehype-stringify": "^10.0.0",
-    "remark-gfm": "^4.0.0",
-    "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.0",
-    "unified": "^11.0.4"
+    "hast-util-to-html": "^9.0.0",
+    "mdast-util-from-markdown": "^2.0.0",
+    "mdast-util-gfm": "^3.0.0",
+    "mdast-util-to-hast": "^13.1.0",
+    "micromark-extension-gfm": "^3.0.0"
   }
 }
