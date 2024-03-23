@@ -1,9 +1,9 @@
 import { MarkdownParser } from '@/parsers/markdown';
-import { MarkdownReader } from '../readers/markdown';
-import { MdastToHastConverter } from '@/converters/mdast-to-hast';
+import { MarkdownReader } from '@/readers/markdown';
+import { MdastToHastTransformer } from '@/transformers/mdast-to-hast';
 import { HtmlSerializer } from '@/serializers/html';
 
-export async function transformMarkdownToHtml(rawContent: string) {
+export function buildHtml(rawContent: string) {
   try {
     const mardownReader = new MarkdownReader();
     const markdown = mardownReader.execute(rawContent);
@@ -11,8 +11,8 @@ export async function transformMarkdownToHtml(rawContent: string) {
     const markdownParser = new MarkdownParser();
     const mdast = markdownParser.execute(markdown);
 
-    const mdastToHastConverter = new MdastToHastConverter();
-    const hast = mdastToHastConverter.execute(mdast);
+    const mdastToHastTransformer = new MdastToHastTransformer();
+    const hast = mdastToHastTransformer.execute(mdast);
 
     const htmlSerializer = new HtmlSerializer();
     const html = htmlSerializer.execute(hast);
@@ -31,5 +31,5 @@ export async function transformMarkdownToHtml(rawContent: string) {
 }
 
 export default {
-  transformMarkdownToHtml,
+  buildHtml,
 };

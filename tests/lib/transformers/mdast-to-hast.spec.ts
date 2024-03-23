@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { MdastToHastConverter } from '@/converters/mdast-to-hast';
+import { MdastToHastTransformer } from '@/transformers/mdast-to-hast';
 import { Mdast } from '@/entities/mdast';
 import { mdastObject } from '@tests/fixtures/syntax-tree';
 import { Root } from 'mdast-util-from-markdown/lib';
 
-describe('Converter: MdastToHast', () => {
-  let sut: MdastToHastConverter;
+describe('Transformer: MdastToHast', () => {
+  let sut: MdastToHastTransformer;
 
   beforeEach(() => {
-    sut = new MdastToHastConverter();
+    sut = new MdastToHastTransformer();
   });
 
   describe('execute', () => {

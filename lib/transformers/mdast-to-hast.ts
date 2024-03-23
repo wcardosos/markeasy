@@ -4,7 +4,7 @@ import { Root } from 'mdast-util-from-markdown/lib';
 import { toHast } from 'mdast-util-to-hast';
 import { HastNodes } from 'mdast-util-to-hast/lib';
 
-export class MdastToHastConverter {
+export class MdastToHastTransformer {
   execute(mdast: Mdast<Root>): Hast<HastNodes> {
     const htmlSyntaxTree = toHast(mdast.syntaxTree);
 
