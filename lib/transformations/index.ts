@@ -1,5 +1,5 @@
-import { MarkdownReader } from '../markdown/readers/markdown';
-import { MarkdownToHtmlSerializer } from './serializers/markdown-to-html';
+import { MarkdownReader } from '../readers/markdown';
+import { MarkdownToHtmlSerializer } from '../serializers/markdown-to-html';
 
 export async function transformMarkdownToHtml(rawContent: string) {
   try {

@@ -1,6 +1,6 @@
-import { Markdown } from '../../../../lib/markdown/entities/markdown';
-import { MarkdownToHtmlSerializer } from '../../../../lib/transformations/serializers/markdown-to-html';
-import { markdownContent, htmlContent } from '../../../fixtures/markup-content';
+import { Markdown } from '@/entities/markdown';
+import { MarkdownToHtmlSerializer } from '@/serializers/markdown-to-html';
+import { markdownContent, htmlContent } from '../../fixtures/markup-content';
 
 describe('MarkdownToHtmlSerializer', () => {
   let sut: MarkdownToHtmlSerializer;
