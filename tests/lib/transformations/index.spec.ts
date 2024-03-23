@@ -1,10 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {
-  htmlContent,
-  markdownContent,
-  metadata,
-} from '../../fixtures/markup-content';
-import transformations from '../../../lib/transformations';
+import { markdownContent, metadata } from '@tests/fixtures/markdown';
+import { htmlContent } from '@tests/fixtures/html';
+import transformations from '@/transformations';
 
 describe('Lib functions', () => {
   describe('transformMarkdownToHtml', () => {

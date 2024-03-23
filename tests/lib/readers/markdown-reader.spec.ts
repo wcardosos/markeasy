@@ -1,5 +1,5 @@
 import { MarkdownReader } from '@/readers/markdown';
-import { markdownContent, metadata } from '@tests/fixtures/markup-content';
+import { markdownContent, metadata } from '@tests/fixtures/markdown';
 
 describe('MarkdownReader', () => {
   let sut: MarkdownReader;

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { MdastToHastConverter } from '@/converters/mdast-to-hast';
 import { Mdast } from '@/entities/mdast';
-import { mdastObject } from '@tests/fixtures/markup-content';
+import { mdastObject } from '@tests/fixtures/syntax-tree';
 import { Root } from 'mdast-util-from-markdown/lib';
 
 describe('Converter: MdastToHast', () => {
@@ -14,8 +14,6 @@ describe('Converter: MdastToHast', () => {
   describe('execute', () => {
     it('should convert mdast to hast correctly', () => {
       const result = sut.execute(new Mdast(mdastObject as Root));
-
-      console.log(JSON.stringify(result.syntaxTree, null, 2));
 
       expect(result.syntaxTree.type).toBe('root');
 

@@ -1,6 +1,7 @@
 import { Hast } from '@/entities/hast';
 import { HtmlSerializer } from '@/serializers/html';
-import { hastObject, htmlContent } from '@tests/fixtures/markup-content';
+import { htmlContent } from '@tests/fixtures/html';
+import { hastObject } from '@tests/fixtures/syntax-tree';
 import { HastNodes } from 'mdast-util-to-hast/lib';
 
 describe('Serializer: Html', () => {

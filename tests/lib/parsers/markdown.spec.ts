@@ -1,10 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Markdown } from '@/entities/markdown';
 import { MarkdownParser } from '@/parsers/markdown';
-import {
-  gfmMarkdownContent,
-  markdownContent,
-} from '@tests/fixtures/markup-content';
+import { gfmMarkdownContent, markdownContent } from '@tests/fixtures/markdown';
 
 describe('Parser: Markdown', () => {
   let sut: MarkdownParser;
