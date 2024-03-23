@@ -1,14 +1,7 @@
 export class Html {
-  constructor(
-    private _content: string,
-    private _metadata: unknown,
-  ) {}
+  constructor(private _content: string) {}
 
   get content() {
     return this._content;
-  }
-
-  get metadata() {
-    return this._metadata;
   }
 }

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { Markdown } from '@/entities/markdown';
 import { MarkdownParser } from '@/parsers/markdown';
 import {
   gfmMarkdownContent,
@@ -14,7 +15,9 @@ describe('Parser: Markdown', () => {
 
   describe('execute', () => {
     it('should parse the markdown content correctly', () => {
-      const result = sut.execute(markdownContent);
+      const markdown = new Markdown(markdownContent, {});
+
+      const result = sut.execute(markdown);
 
       expect(result.syntaxTree.type).toBe('root');
 
@@ -23,7 +26,9 @@ describe('Parser: Markdown', () => {
     });
 
     it('should parse the gfm markdown content correctly', () => {
-      const result = sut.execute(gfmMarkdownContent);
+      const markdown = new Markdown(gfmMarkdownContent, {});
+
+      const result = sut.execute(markdown);
 
       expect(result.syntaxTree.children.at(0)?.type).toBe('table');
     });

@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "hast-util-to-html": "^9.0.0",
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-gfm": "^3.0.0",
     "mdast-util-to-hast": "^13.1.0",
