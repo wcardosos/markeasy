@@ -22,6 +22,5 @@ import { buildHtml} from 'markeasy'
 const result = buildHtml('# markeasy')
 
 console.log(result.html)
-console.log(result.metadata)
 // <h1>markeasy</h1>
 ```
